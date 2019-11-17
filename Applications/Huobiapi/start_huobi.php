@@ -24,8 +24,8 @@ $worker->onWorkerStart = function($worker)
     $con->onConnect = function($con) {
 
         //行情图+盘口
-        $make=["ethusdt","btcusdt","ethbtc"];
-        $klintime=["1min","5min","15min","30min","60min","4hour","1day","1mon","1week","1year"];
+        $make=["btcusdt"];
+        $klintime=["1min"];
 
         foreach ($make as $value) {
             foreach ($klintime as $v) {
