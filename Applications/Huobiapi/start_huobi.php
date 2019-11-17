@@ -88,7 +88,8 @@ $worker->onWorkerStart = function($worker)
              * */
 
             $msg=[];
-//                file_put_contents("./deta000.txt",var_export($data,true)."%%-----------\n",FILE_APPEND);
+
+            file_put_contents("./deta.txt",var_export($data,true)."%%-----------\n",FILE_APPEND);
 
             $hbrds= new HuobiRedis("127.0.0.1",6379);
             if(isset($data['ch'])) {
