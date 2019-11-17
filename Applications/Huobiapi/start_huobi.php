@@ -56,7 +56,7 @@ $worker->onWorkerStart = function($worker)
 //                 'sub' => "market.".$value.".detail",
 //                 'id' => $value."detail" . time()
 //             ]);
-             $con->send($handicap);
+//             $con->send($handicap);
         };
     };
     // mysql连接发来数据时，转发给对应客户端的连接
@@ -92,13 +92,13 @@ $worker->onWorkerStart = function($worker)
 
             file_put_contents("./deta.txt",var_export($data,true)."%%-----------\n",FILE_APPEND);
 
-//            if( isset( $data['tick'] )  ){
-//                file_put_contents("./deta.txt","low:{$data['tick']}"."%%-----------\n",FILE_APPEND);
-//            }
-//
-//            if( isset( $data['tick'] ) && isset( $data['tick']['low'])    && isset( $data['tick']['high'] )  ){
-//                file_put_contents("./deta.txt","low:{$data['tick']['low']}---hight:{$data['tick']['high'] }--"."%%-----------\n",FILE_APPEND);
-//            }
+            if( isset( $data['tick'] )  ){
+                file_put_contents("./deta.txt","low:{$data['tick']}"."%%-----------\n",FILE_APPEND);
+            }
+
+            if( isset( $data['tick'] ) && isset( $data['tick']['low'])    && isset( $data['tick']['high'] )  ){
+                file_put_contents("./deta.txt","low:{$data['tick']['low']}---hight:{$data['tick']['high'] }--"."%%-----------\n",FILE_APPEND);
+            }
 
 
 //            $hbrds= new HuobiRedis("127.0.0.1",6379);
