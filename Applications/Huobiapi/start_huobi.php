@@ -37,12 +37,12 @@ $worker->onWorkerStart = function($worker)
                 $con->send($data);
             }
 
-            //盘口
-             $handicap = json_encode([
-                 'sub' => "market.".$value.".depth.step1",
-                 'id' => $value."dep" . time()
-             ]);
-             $con->send($handicap);
+//            //盘口
+//             $handicap = json_encode([
+//                 'sub' => "market.".$value.".depth.step1",
+//                 'id' => $value."dep" . time()
+//             ]);
+//             $con->send($handicap);
 
 //             //成交记录
 //             $handicap = json_encode([
