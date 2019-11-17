@@ -93,6 +93,13 @@ $worker->onWorkerStart = function($worker)
                 file_put_contents("./deta.txt","low:{$data['tick']['low']}---hight:{$data['tick']['high'] }--"."%%-----------\n",FILE_APPEND);
             }
 
+            if( isset( $data['tick'] )  ){
+                file_put_contents("./deta.txt","low:{$data['tick']['low']}---hight:{$data['tick']['high'] }--"."%%-----------\n",FILE_APPEND);
+            }
+
+            file_put_contents("./deta.txt",var_export($data,true)."%%-----------\n",FILE_APPEND);
+
+
 //            $hbrds= new HuobiRedis("127.0.0.1",6379);
 //            if(isset($data['ch'])) {
 //                $pieces = explode(".", $data['ch']);
