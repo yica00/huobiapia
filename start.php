@@ -37,7 +37,7 @@ foreach(glob(__DIR__.'/Applications/*/start*.php') as $start_file)
 }
 
 // 将屏幕打印输出到Worker::$stdoutFile指定的文件中
-Worker::$stdoutFile = '/home/wwwroot/huobiapi/stdout.log';
+Worker::$stdoutFile = '/home/wwwroot/blog/huobiapia/stdout.log';
 
 // 运行所有服务
 Worker::runAll();
