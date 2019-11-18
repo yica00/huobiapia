@@ -36,8 +36,8 @@ foreach(glob(__DIR__.'/Applications/*/start*.php') as $start_file)
     require_once $start_file;
 }
 
-// 将屏幕打印输出到Worker::$stdoutFile指定的文件中
-Worker::$stdoutFile = '/home/wwwroot/blog/huobiapia/stdout.log';
+// 将屏幕打印输出到Wor .ker::$stdoutFile指定的文件中
+Worker::$stdoutFile = __DIR__ .'/stdout.log';
+Worker::$logFile = __DIR__ .'/workerman.log';
 
-// 运行所有服务
-Worker::runAll();
+// 运行所有服务orkman
