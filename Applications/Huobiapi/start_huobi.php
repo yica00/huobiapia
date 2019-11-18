@@ -4,9 +4,9 @@ use Workerman\Connection\AsyncTcpConnection;
 //require_once '../../vendor/workerman/workerman/Autoloader.php';
 use \Workerman\Autoloader;
 use GatewayWorker\Gateway;
-//require_once __DIR__ . '/huobiredis.php';
+require_once __DIR__ . '/Notify.php';
 
-//$REAL_MYSQL_ADDRESS = 'ws://api.huobi.pro:443/ws';
+// $REAL_MYSQL_ADDRESS = 'ws://api.huobi.pro:443/ws';
 $REAL_MYSQL_ADDRESS = 'ws://api-aws.huobi.pro:443/ws';
 
 // 代理监听本地7272端口

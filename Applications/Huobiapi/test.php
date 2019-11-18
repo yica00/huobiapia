@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/Notify.php';
 
 $notify = new Notify();
 
