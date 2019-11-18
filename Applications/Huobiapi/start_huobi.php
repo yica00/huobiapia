@@ -97,7 +97,12 @@ $worker->onWorkerStart = function($worker)
 //            }
 
             if( isset( $data['tick'] ) && isset( $data['tick']['low'])    && isset( $data['tick']['high'] )  ){
-                file_put_contents("./deta.txt","low:{$data['tick']['low']}---hight:{$data['tick']['high'] }--"."%%-----------\n",FILE_APPEND);
+//                file_put_contents("./deta.txt","low:{$data['tick']['low']}---hight:{$data['tick']['high'] }--"."%%-----------\n",FILE_APPEND);
+
+                $notify = new Notify();
+
+                $notify->redis->set( 'low' , $data['tick']['low']);
+                $notify->redis->set( 'hight' , $data['tick']['high']);
             }
 
 
