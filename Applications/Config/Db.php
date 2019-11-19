@@ -18,7 +18,7 @@ class Db
         'port'    => 3306,
         'user'    => 'root',
         'password' => 'licheng1028',
-        'dbname'  => 'tokenview',
+        'dbname'  => 'crm',
         'charset'    => 'utf8'
 
     );
